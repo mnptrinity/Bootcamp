@@ -1,0 +1,17 @@
+html
+    head
+        title Login page#{id.id}
+    body
+        #content
+        form(action='/books/add', method='post')
+            input(type="text",placeholder="username",name="id",value=`${id.id}`)
+            br 
+            br
+            input(type="text",name="name",value=`${id.name}`)
+            br
+            br
+            input(type="text",name="author",value=`${id.author}`)
+            br
+            br
+            input(type="submit", value="Submit")
+

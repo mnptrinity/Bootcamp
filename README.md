@@ -1,41 +1,14 @@
-# Bootcamp
-
-Task Of Day 2 ....
-
-
-
-##############HTTP methods like 
-GET ---- It is used to get the input data from the server...
-, 
-POST ---- It is used to post the data to the server and to store that in the db
-, 
-PATCH --- It is used for updating purpose...
-, 
-DELETE ---- It is used to send the request to the server and to perform the delete operation in the collections
-,
-PUT --- It is used to replace the entire collection , and it won't be used for the updating purpose...
-
-
-######################Http Status Codes like 
-404 --- Page Not Found
-
-, 
-403 --- forBidden
-, 
-200 -- Ok
-, 
-201 -- Created
-, 
-500 --- Internal Server error
-,
-400 - Bad request
-,
-401 -- Unauthorized
+Create a form using JADE templating engine such that when I got to the route http://localhost:3000/book/add 
+it will render a webpage with 3 input boxes containing book id, book name, author name and a Submit button.
+ When I click on the submit button it should send the form data to the backend and print it to console.
 
 
 
-1XX --- Informational
-2XX --- Success
-3XX --- Redireaction
-4XX --- Client Error
-5XX --- Server Error
+ post --- we use the req.body to get the posted data from the body of the form.....
+
+ get -- we will be using the req.params , it will  help us to get the parameter from the URL when it is called....
+
+ when the submit button is pressed it will redirect to the mentioned action --- route and it must be of post method
+ and it will get the arguments from the form that is been posted...
+
+ 
