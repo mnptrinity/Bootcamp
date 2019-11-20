@@ -13,6 +13,8 @@ and it will get the entire directory location of the individual operating sysyte
 
 
 -----------> cookie-parser
+  it will be used in the app.js or the index.js and it is used to fetch the browser cookies and send it to the server when  ever the request is made to the server.
+
 it is used for handelling the cookies in the browser and is has only lesser space for storing and this data are stored inside the browser and it is used for signing it for security purpose
 
 
