@@ -24,7 +24,6 @@ const userSchema=new Schema({
         type:String,
         minlength:10
     }
-
 });
 
 
