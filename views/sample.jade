@@ -1,16 +1,16 @@
 html
     head
-        title Login page#{id.id}
+        title Book page
     body
         #content
         form(action='/books/add', method='post')
-            input(type="text",placeholder="username",name="id",value=`${id.id}`)
+            input(type="text",placeholder="id",name="sno")
             br 
             br
-            input(type="text",name="name",value=`${id.name}`)
+            input(type="text",name="book",placeholder="Book name")
             br
             br
-            input(type="text",name="author",value=`${id.author}`)
+            input(type="text",name="author",placeholder="Author name")
             br
             br
             input(type="submit", value="Submit")

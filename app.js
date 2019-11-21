@@ -10,6 +10,7 @@ var booksRouter=require('./routes/books');
 var authRouter=require('./routes/auth');
 
 var app = express();
+require('./connection/mongoose');
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));

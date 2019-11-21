@@ -1,6 +1,20 @@
 const express=require('express');
 const router=express.Router();
+const {Book}=require('../database/user');
 
+
+
+router.get('/',function(req,res,next){
+    Book.find(function(error,user) {
+        if(error)
+        {
+            res.status(500).json({message:'There is a connection error'});
+        }
+        else{
+            res.status(200).send(user);
+        }
+    });
+})
 
 router.get('/search',function(req,res,next){
     res.status(200).json({id: 1, name: "Harry Potter", author: "J.K. Rowling"});
@@ -8,17 +22,25 @@ router.get('/search',function(req,res,next){
 
 router.post('/add',function(req,res,next)
 {
-    const value=req.body;
-    console.log("id :",value.id);
-    console.log("name :",value.name);
-    console.log("author : ",value.author);
+    const newbook=new Book(req.body);
+    newbook.save(function(error,user){
+        if(error)
+        {
+            res.status(500).json({message:"data not saved...."});
+        }
+        else
+        {
+      res.status(200).json({message:"data  saved successfully...."});
+
+        }
+    });
+
+    
 });
 
-router.get('/add/:id/:name/:author',function(req,res,next)
+router.get('/add',function(req,res,next)
 {
-   const  id=req.params;
-   console.log(id);
-    res.render('sample',{id:id});
+    res.render('sample');
 });
 
 
