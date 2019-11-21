@@ -4,7 +4,7 @@ require('dotenv').config();
 
 
 //establishing the mongoose connection...
-mongoose.connect(process.env.URL,
+mongoose.connect(process.env.mongoURI,
 {useUnifiedTopology: true,useNewUrlParser: true });
 
 mongoose.connection.on("connected", () => {
@@ -23,3 +23,5 @@ mongoose.connection.on("disconnected", () => {
       process.exit(0);
     });
   });
+
+

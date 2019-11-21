@@ -20,7 +20,7 @@ userSchema.statics.findByDob = function(Users, callback) {
 							let date = date_ob.getDate();
 							let month=date_ob.getMonth();
 						if(old==date&&old_month==month)
-								console.log( "Today is  his/her Birthday"+user);
+								return ("Today is  his/her Birthday"+user);
 								else
 									null;
 						}

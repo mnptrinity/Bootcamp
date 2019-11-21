@@ -6,13 +6,13 @@ const HttpStatus = require("http-status-codes");
 module.exports.readUser = (req, res) => {
 	User.findById(req.params.id)
 	.then(response=>{
-		console.log("Odject : "+response);
-		console.log(response.fullName);
+
+	res.status(200).send("The full name of the user is..."+response.fullName);
+
 	})
 	.catch(err=>{
-		console.log("Error in the insertion..."+err);
+	   res.status(200).send("Error in the selection of the user...");
 	});
-	res.send('hello');
 };
 
 
@@ -21,10 +21,12 @@ module.exports.readUser = (req, res) => {
 module.exports.finddob=function(req,res){
 	User.findById(req.params.id)
 	.then(response =>{
-		console.log("obj:",response.getIfbirth());
+		// console.log("obj:",response.getIfbirth());
+		res.status(200).send(response.getIfbirth())
 	})
 	.catch(err=>{
-		console.log("Error in the selection of the user..."+err);
+		// console.log("Error in the selection of the user...");
+				res.status(200).send("Error in the selection of the user...");
 	});
 };
 
@@ -33,7 +35,7 @@ module.exports.finddob=function(req,res){
 
 //this is for the static  method for the finding the all persons who are havind the birthday today
 module.exports.findall=function(req,res){
-	User.findByDob("Mohan",(err, data) => {
+	User.findByDob("21.11.2019",(err, data) => {
     if (err)
       return res
         .status(HttpStatus.BAD_REQUEST)

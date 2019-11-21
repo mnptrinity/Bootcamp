@@ -24,7 +24,7 @@ router.post('/adduser',function(req,res){
    .catch(err=>{
        console.log("Error in the insertion..."+err);
    });
-   res.send('hello');
+   res.status(200).send("The data is successfully stored in the DB.!");
 });
 
 
