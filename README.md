@@ -34,6 +34,7 @@ PUT --- It is used to replace the entire collection , and it won't be used for t
 
 
 
+
 1XX --- Informational
 2XX --- Success
 3XX --- Redireaction
